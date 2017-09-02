@@ -32,6 +32,13 @@ body {
 	border: 1px solid #204156;	
 }
 
+.competitive-programming {
+	margin-top: 30px;
+  	padding: 8px 18px;
+	text-align: center;
+	border: 1px solid #204156;	
+}
+
 nav {
   background-color: #FFF;
 }
