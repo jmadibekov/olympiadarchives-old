@@ -39,6 +39,10 @@ body {
 	border: 1px solid #204156;	
 }
 
+.copyright {
+	text-align: center;
+}
+
 nav {
   background-color: #FFF;
 }
