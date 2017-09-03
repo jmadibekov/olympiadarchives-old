@@ -6,6 +6,10 @@ html, body {
   line-height: 1.5;
 }
 
+p {
+  font-size: 15px;
+}
+
 header .row {
 	display: flex; 
  	align-items: center;
@@ -37,6 +41,13 @@ body {
   	padding: 8px 18px;
 	text-align: center;
 	border: 1px solid #204156;	
+}
+
+.photos {
+  margin-top: 30px;
+    padding: 8px 18px;
+  text-align: center;
+  border: 1px solid #204156;  
 }
 
 .copyright {
