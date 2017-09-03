@@ -1,0 +1,84 @@
+html, body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 15px;
+}
+
+header .row {
+	display: flex; 
+ 	align-items: center;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	background-image: url('https://raw.githubusercontent.com/nurbakyt99/nurbakyt99.github.io/master/background.jpg');
+ 	background-position: center top;
+  	background-size: cover;
+  	margin: 0;
+}
+
+.page-title {
+  	text-align: center;
+ 	font-weight: 100;
+ 	font-size: 60px;
+}
+
+.page-description {
+	margin-top: 60px;
+  	padding: 8px 18px;
+	text-align: center;
+	border: 1px solid #204156;	
+}
+
+.competitive-programming {
+	margin-top: 30px;
+  	padding: 8px 18px;
+	text-align: center;
+	border: 1px solid #204156;	
+}
+
+.copyright {
+	text-align: center;
+}
+
+nav {
+  background-color: #FFF;
+}
+
+nav li {
+  margin: 0;
+  padding: 0 10px;
+  display: inline;
+}
+
+nav ul {
+  display: inline;
+}
+
+nav a {
+  height: 60px;
+  line-height: 60px;
+  color: #204156;
+  text-decoration: none;
+}
+
+.about-me {
+	float: right;
+}
+
+.about-me a {
+  margin-right: 30px;
+  padding: 8px 18px;
+  border: 1px solid #204156;
+}
+
+.about-me a:active {
+  position: relative;
+  bottom: 2px;
+}
