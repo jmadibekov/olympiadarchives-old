@@ -6,41 +6,46 @@ html, body {
   line-height: 1.5;
 }
 
+p {
+  font-size: 15px;
+}
+
+
 header .row {
-	display: flex; 
- 	align-items: center;
+  display: flex; 
+  align-items: center;
 }
 
 body {
-	font-family: 'Lato', sans-serif;
-	background-image: url('https://raw.githubusercontent.com/nurbakyt99/nurbakyt99.github.io/master/background.jpg');
- 	background-position: center top;
-  	background-size: cover;
-  	margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-image: url('https://raw.githubusercontent.com/nurbakyt99/nurbakyt99.github.io/master/background.jpg');
+  background-position: center top;
+    background-size: cover;
+    margin: 0;
 }
 
 .page-title {
-  	text-align: center;
- 	font-weight: 100;
- 	font-size: 60px;
+    text-align: center;
+  font-weight: 100;
+  font-size: 60px;
 }
 
 .page-description {
-	margin-top: 60px;
-  	padding: 8px 18px;
-	text-align: center;
-	border: 1px solid #204156;	
+  margin-top: 60px;
+    padding: 8px 18px;
+  text-align: center;
+  border: 1px solid #204156;  
 }
 
 .competitive-programming {
-	margin-top: 30px;
-  	padding: 8px 18px;
-	text-align: center;
-	border: 1px solid #204156;	
+  margin-top: 30px;
+    padding: 8px 18px;
+  text-align: center;
+  border: 1px solid #204156;  
 }
 
 .copyright {
-	text-align: center;
+  text-align: center;
 }
 
 nav {
@@ -65,7 +70,7 @@ nav a {
 }
 
 .about-me {
-	float: right;
+  float: right;
 }
 
 .about-me a {
