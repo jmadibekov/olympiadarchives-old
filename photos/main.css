@@ -42,6 +42,14 @@ section .row img {
 	border: 1px solid #204156;	
 }
 
+.in-photos {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 8px 18px;
+  text-align: center;
+  border: 1px solid #204156;  
+}
+
 .competitive-programming {
 	margin-top: 30px;
   	padding: 8px 18px;
