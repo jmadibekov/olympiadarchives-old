@@ -1,2 +1,3 @@
-# nurbakyt.com  
-It's my personal website. You can find some useful stuff there & some information about me. :)
+# olympiadarchives.org
+
+You can find there the archives of Kazakhstani Olympiads of past few years. :)
