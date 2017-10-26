@@ -1,43 +1,55 @@
 <!doctype html>
 <html>
-
 <head>
 	<title>Kazakhstan Computing Olympiads</title>
 	<meta charset="utf-8"/>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>	
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>    
-  	<link rel="stylesheet" type="text/css" href="main.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+
+	<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"> -->
 </head>
 
 <body>
 
-<!-- 	<header class="container">
-    	<div class="row">
-      		<h1 class="col-sm-4">Welcome to my page!</h1>
-      		
-      		<nav class="col-sm-8 text-right">
-        		<p>Home page</p>
-        		<p>CP archives</p>
-        		<p>Photos</p>
-        		<p>About me</p>
-      		</nav>
-    	</div>
-  	</header>
- -->
-
-
 	<header>
 		<h1 class = "page-title"> Welcome!</h1>
 	</header>
-	
+
 	<section class="container">
     	<div class="row">
   			<div class = "competitive-programming">
           <p>
-            Here you can find archives of <b>Kazakhstan Computing Olympiads </b> <i>(National Olympiad in Informatics or IZhO)</i>. 
-            </br> </br> Unfortunately, most of them are in Russian. But you can find also English versions of recent Olympiads (with editorials), and others will be translated soon. Hope you enjoy it! 
+            Here you can find archives of Olympiads in <b>Competitive Programming</b> for high school students.
+            </br> </br> Hope they will be helpful for you!
           </p>
-          <a href="archives/index.html" >Archives</a>
+          <a class="buttonLink" href="archives/index.html" >Archives</a>
+
+					<ul class="nestedList">
+					   <li class="dropdown">Data mining and data warehousing
+					      <ul>
+					           <li>Data mining techniques</li>
+					           <li>Knowledge discovery</li>
+					      </ul>
+					   </li>
+
+					    <li class="dropdown">Soft computing and artificial intelligence
+					       <ul>
+					            <li>Fuzzy systems</li>
+					            <li>Neural networks</li>
+					       </ul>
+					    </li>
+					</ul>
+
+					<script type="text/javascript">
+					$('li.dropdown').click(function() {
+					   $('li.dropdown').not(this).find('ul').hide();
+					   $(this).find('ul').toggle();
+					});
+					</script>
+
         </div>
 		  </div>
 	</section>
@@ -45,8 +57,8 @@
 	<section class="container">
     	<div class="row">
     		<div class="competitive-programming">
-				  <p>If you haven't heard about Competitive program at all or you're only a beginner, it's not a problem at all. We are here to help you familiarize with it. So go ahead and click the button below. </p>
-        	<a href="competitive-programming/index.html" >Learn more</a>
+				  <p>If you haven't heard about <b>Competitive Programming</b> at all, you can learn more about it by clicking the button below. </p>
+        	<a class="buttonLink" href="competitive-programming/index.html" >Learn more</a>
         </div>
   		</div>
 	</section>
@@ -58,9 +70,9 @@
     			<ul>
 	        		<li><a href="index.html">Home page</a></li>
     	    		<li><a href="competitive-programming/index.html">Competitive Programming</a></li>
-              <li><a href="archives/index.html">Archives</a></li>              
+              <li><a href="archives/index.html">Archives</a></li>
 	      		</ul>
-      	
+
     	  		<div class="about-me">
       				<a href="about-me/index.html">About me</a>
       			</div>
@@ -79,4 +91,3 @@
 </body>
 
 </html>
-
