@@ -1,3 +1,3 @@
 # olympiadarchives.org
 
-You can find there the archives of Kazakhstani Olympiads of past few years. :)
+You can find here the archives of past olympiads in informatics :)
