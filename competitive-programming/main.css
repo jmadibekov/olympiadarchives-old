@@ -1,3 +1,18 @@
+.links {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.increasedFontSize {
+  font-size: 15px;
+}
+
+.smallHeader {
+  margin-bottom: 30px;
+}
+
 html, body {
   min-height: 100%;
   display: flex;
@@ -12,7 +27,7 @@ p {
 
 
 header .row {
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
@@ -34,14 +49,14 @@ body {
   margin-top: 60px;
     padding: 8px 18px;
   text-align: center;
-  border: 1px solid #204156;  
+  border: 1px solid #204156;
 }
 
 .competitive-programming {
   margin-top: 30px;
     padding: 8px 18px;
   text-align: center;
-  border: 1px solid #204156;  
+  border: 1px solid #204156;
 }
 
 .copyright {
