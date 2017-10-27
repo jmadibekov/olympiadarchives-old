@@ -2,64 +2,88 @@
 <html>
 
 <head>
-	<title>Archives</title>
-	<meta charset="utf-8"/>
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>	
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>    
-  	<link rel="stylesheet" type="text/css" href="main.css"/>
+  <title>Archives</title>
+  <meta charset="utf-8"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script src="app.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
 </head>
 
 <body>
 
-	<header>
-		<h1 class = "page-title"> Archives</h1>
-	</header>
-	
-	<section class="container">
-    <div class="competitive-programming">     
+  <header>
+    <h1 class = "page-title"> Archives</h1>
+  </header>
+
+  <section class="container">
     <div class="row">
-      
-      <div class="col-sm-6">   
-    			<p>
-           <a href="roi2017/index.html">National Olympiad in Informatics, 2017</a>
-          </p>
+      <div class="competitive-programming">
+        <p class="chooseTitle">Press the name of an Olympiad to see more about it</p>
+        <ul class="nestedList">
+           <li class="dropdown"><p class="olympiadType">International Olympiad in Informatics</p>
+              <ul>
+                   <li>2016</li>
+              </ul>
+           </li>
 
-          </br> </br>
-          <p>
-            <a href="https://s3-us-west-1.amazonaws.com/olympiadarchives/Kazakhstan+Computing+Olympiad/2016/2016+KazNO.zip">National Olympiad in Informatics, 2016</a>
-          </p>
+            <li class="dropdown"><p class="olympiadType">Kazakhstan National Olympiad in Informatics</p>
+               <ul>
+                    <li>2017</li>
+                    <li>2016</li>
+                    <li>2015</li>
+               </ul>
+            </li>
 
-          </br> </br>
-          <p>
-            <a href="https://s3-us-west-1.amazonaws.com/olympiadarchives/Kazakhstan+Computing+Olympiad/2015/KazNO+2015.zip">National Olympiad in Informatics, 2015</a>
-          </p>
+            <li class="dropdown"><p class="olympiadType">Asia-Pacific Informatics Olympiad</p>
+               <ul>
+                    <li>2016</li>
+               </ul>
+            </li>
+
+            <li class="dropdown"><p class="olympiadType">International Zhautykov Olympiad</p>
+               <ul>
+                    <li>2017</li>
+               </ul>
+            </li>
+
+            <li class="dropdown"><p class="olympiadType">Baltic Olympiad in Informatics</p>
+               <ul>
+                    <li>2016</li>
+               </ul>
+            </li>
+
+            <li class="dropdown"><p class="olympiadType">Central European Olympiad in Informatics</p>
+               <ul>
+                    <li>2016</li>
+               </ul>
+            </li>
+
+
+        </ul>
 
       </div>
-
-      <div class="col-sm-6">        
-          <p> 
-            <a href="izho2017/index.html">International Zhautykov Olympiad, 2017</a>
-          </p>
-      </div>
-
     </div>
-    </div>
-	</section>
+  </section>
 
   <footer class="container">
-    	<div class = "row">
-    		<nav>
-    			<ul>
-	        		<li><a href="../index.html">Home page</a></li>
-    	    		<li><a href="../competitive-programming/index.html">Competitive Programming</a></li>
-        			<li><a href="index.html">Archives</a></li>
-	      		</ul>
-      	
-    	  		<div class="about-me">
-      				<a href="../about-me/index.html">About me</a>
-      			</div>
-    		</nav>
-    	</div>
+      <div class = "row">
+        <nav>
+          <ul>
+              <li><a href="../index.html">Home page</a></li>
+              <li><a href="../competitive-programming/index.html">Competitive Programming</a></li>
+              <li><a href="index.html">Archives</a></li>
+            </ul>
+
+            <div class="about-me">
+              <a href="../about-me/index.html">About me</a>
+            </div>
+        </nav>
+      </div>
 
       <div class = "copyright">
         <div class = "row">
@@ -68,9 +92,8 @@
         </div>
       </div>
 
-	</footer>
+  </footer>
 
 </body>
 
 </html>
-

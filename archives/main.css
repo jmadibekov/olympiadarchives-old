@@ -1,3 +1,22 @@
+.chooseTitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #333333;
+}
+
+li.dropdown ul {
+  display : none;
+}
+
+.nestedList {
+  text-align: left;
+}
+
+.olympiadType {
+  font-size: 15px;
+  color: #373D3F;
+}
+
 html, body {
   min-height: 100%;
   display: flex;
@@ -12,7 +31,7 @@ p {
 
 
 header .row {
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
@@ -34,14 +53,19 @@ body {
   margin-top: 60px;
     padding: 8px 18px;
   text-align: center;
-  border: 1px solid #204156;  
+  border: 1px solid #204156;
+}
+
+.rowInitial {
+  text-align: center;
+  border: 1px solid #204156;
 }
 
 .competitive-programming {
   margin-top: 30px;
     padding: 8px 18px;
   text-align: center;
-  border: 1px solid #204156;  
+  border: 1px solid #204156;
 }
 
 .copyright {

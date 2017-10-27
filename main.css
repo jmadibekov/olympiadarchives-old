@@ -1,3 +1,11 @@
+li.dropdown ul {
+  display : none;
+}
+
+.nestedList {
+  text-align: left;
+}
+
 html, body {
   min-height: 100%;
   display: flex;
@@ -41,14 +49,6 @@ body {
   padding: 8px 18px;
 	text-align: center;
 	border: 1px solid #204156;
-}
-
-li.dropdown ul {
-  display : none;
-}
-
-.nestedList {
-  text-align: left;
 }
 
 .buttonLink {
