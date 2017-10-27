@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+
+	<title>Nurbakyt's Blog #2</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold|Reenie+Beanie">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> -->
+
+</head>
+
+<body>
+
+	 <div class = "w3-content w3-margin-top" style = "max-width:1000px">
+		 <div class="w3-row w3-card w3-white">
+		    <h1 class="page-title">Blog #1</h1>
+		 </div>
+		<br>
+		<br>
+		<section id="content">
+
+      <article class="fontColor">
+        <header class="w3-container col-main">
+          <h1>Beautiful idea behind the problem D of last Kazakhstan NOI</h1>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span> <time datetime="2017-09-10T13:00:00+06:00">Sun 10 September 2017</time>
+ 			       </span>
+            </div>
+          </div>
+        </header>
+        <br>
+        <div class="col-main w3-container">
+          <main id="article-content">
+            <p>
+              When I was 11th grade, I competed in Kazakhstan National Olympiad in Informatics. To be honest, the problemset was
+              awesome, I really liked it. I suggest you to check <a href="../../archives/index.html">it</a> out.
+              And one of my favourite problems from that contest was problem D of the first day. Check the <a href="../../data/blog2problem.pdf">statement</a>.
+              <br /><br />
+              <b>Solution</b>
+              <br /><br />
+              <i>Subtask 1 — 9 points</i>
+              <br/>
+              This subtask can be solved with the brute-force solution: by checking all possible 2^n subsequences of
+              sequence <i>a</i>.
+              <br /><br />
+              <i>Subtask 2 — 9 points</i>
+              <br/>
+              Check the solution for the third subtask, which is O(min(n, m)^2 * max(n, m)). Or you can solve it by
+              checking all possible 2^m subsequences of sequence <i>b</i>.
+              <br /><br />
+              <i>Subtask 3 — 28 points</i>
+              <br/>
+              Unlike previous subtasks, in this subtask you need to come up with a much more efficient solution. For now, let’s forget the memory limit for this problem, I’ll explain how we can reduce our memory usage after. :)
+              Let’s solve it using dynamic programming.
+              maxLen[j][i][tp], where 1 ≤ j ≤ m,1 ≤ i ≤ n,0 ≤ tp ≤ 1, is equal to the maximum possible length of a beautiful sequence which is a subsequence of arrays a[1],a[2],...,a[i] and b[1],b[2],...,b[j].
+              The length is odd if tp = 1 or even if tp = 0. And the last element of a beautiful sequence is equal to a[i].
+              f[j][i][tp], with same parameters, is equal to the number of distinct beautiful sequences of maximum length.
+              <br /><br />
+
+              <i>Subtask 4 — 54 points</i>
+              <br/>
+              To solve for full points we need to get rid of the last for. We can get rid of it by keeping the maximum
+              lengths of odd/even beautiful sequences (with keeping number of different sequences, also).
+              <br/>
+              That’s it! Now the only question is: how to reduce the memory usage. Fortunately, we can get rid of parameter j, by creating 2 new arrays (one for the j − 1 and one for j).
+If it’s still not clear to you, then take a look at the solution code by downloading the archive of this problem.
+              <br /><br />
+              P.S. You can find more detailed solution in the <a href="../../data/Editorial.pdf">editorial</a>.
+            </p>
+          </main>
+          <br>
+        </div>
+      </article>
+
+		 </div>
+
+		 <footer class="container">
+	       <div class = "row">
+	         <nav>
+	           <ul>
+	               <li><a href="../../index.html">Home page</a></li>
+	               <li><a href="../../competitive-programming/index.html">Competitive Programming</a></li>
+	               <li><a href="../../archives/index.html">Archives</a></li>
+	             </ul>
+
+	             <div class="about-me">
+	               <a href="../../about-me/index.html">About me</a>
+	             </div>
+	         </nav>
+	       </div>
+
+	       <div class = "copyright">
+	         <div class = "row">
+	             <p>&copy; Nurbakyt Madibek 2017</p>
+	             <p>mnurbakyt@icloud.com</p>
+	         </div>
+	       </div>
+
+	   </footer>
+
+</body>
+
+</html>
