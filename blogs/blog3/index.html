@@ -40,39 +40,24 @@
         <div class="col-main w3-container">
           <main id="article-content">
             <p>
-							Here is the <a href="../../data/E.pdf">problem</a>. Here is the brief statement:
+							You can find the official problem statement by this <a href="../../data/E.pdf">link</a>. Here is the brief statement:
               <br /><br />
 							<i>There are K cards numbered from 1 to K. Every card has each number from 1 to N written on it. Some numbers exist on the front side of the card and some on the back side. No number exists on both the sides of a card at the same time. These cards are placed on the table in a row such that only one side is visible. You are allowed to flip them any number of times. You task is to flip some of them to maximize the number of different numbers on visible sides.</i>
-              <b>Solution</b>
               <br /><br />
-              <i>Subtask 1 — 9 points</i>
-              <br/>
-              This subtask can be solved with the brute-force solution: by checking all possible 2^n subsequences of
-              sequence <i>a</i>.
-              <br /><br />
-              <i>Subtask 2 — 9 points</i>
-              <br/>
-              Check the solution for the third subtask, which is O(min(n, m)^2 * max(n, m)). Or you can solve it by
-              checking all possible 2^m subsequences of sequence <i>b</i>.
-              <br /><br />
-              <i>Subtask 3 — 28 points</i>
-              <br/>
-              Unlike previous subtasks, in this subtask you need to come up with a much more efficient solution. For now, let’s forget the memory limit for this problem, I’ll explain how we can reduce our memory usage after. :)
-              Let’s solve it using dynamic programming.
-              maxLen[j][i][tp], where 1 ≤ j ≤ m,1 ≤ i ≤ n,0 ≤ tp ≤ 1, is equal to the maximum possible length of a beautiful sequence which is a subsequence of arrays a[1],a[2],...,a[i] and b[1],b[2],...,b[j].
-              The length is odd if tp = 1 or even if tp = 0. And the last element of a beautiful sequence is equal to a[i].
-              f[j][i][tp], with same parameters, is equal to the number of distinct beautiful sequences of maximum length.
-              <br /><br />
+							<b>Solution</b>
+							<br /><br />
 
-              <i>Subtask 4 — 54 points</i>
-              <br/>
-              To solve for full points we need to get rid of the last for. We can get rid of it by keeping the maximum
-              lengths of odd/even beautiful sequences (with keeping number of different sequences, also).
-              <br/>
-              That’s it! Now the only question is: how to reduce the memory usage. Fortunately, we can get rid of parameter j, by creating 2 new arrays (one for the j − 1 and one for j).
-If it’s still not clear to you, then take a look at the solution code by downloading the archive of this problem.
-              <br /><br />
-              P.S. You can find more detailed solution in the <a href="../../data/Editorial.pdf">editorial</a>.
+							Let’s call a X is beautiful if it’s visible in one of the K cards. You can notice that some X will not be beautiful number in only one case - when every card from 1 to K is flipped to the side where X is not visible, which can be represented by a bit mask of length K. Now we can calculate for each a bit mask how many numbers it would affect (making them not beautiful) if we choose it. The answer would be the best mask - where number of not affected numbers is maximum. Also, if 2K > N, then there exists a bit mask which would not affect any number. Thus, in this case it always possible to find a bit mask where each number from 1 to N is on the visible side.
+
+							<br /><br />
+              You can find more detailed solution in the <a href="../../data/E-editorial.pdf">editorial</a>.
+
+							<br /><br />
+							For practice, you can try to solve <a href="https://www.hackerrank.com/contests/w34/challenges/magic-cards">this</a> similar problem.
+							<p style="text-align:center;">
+                <img src="../../data/magic-cards.png" width="90%" align="middle" />
+              </p>
+
             </p>
           </main>
           <br>
