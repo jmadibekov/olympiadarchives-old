@@ -47,7 +47,7 @@
 							<b>Solution</b>
 							<br /><br />
 
-							Let’s call a X is beautiful if it’s visible in one of the K cards. You can notice that some X will not be beautiful number in only one case - when every card from 1 to K is flipped to the side where X is not visible, which can be represented by a bit mask of length K. Now we can calculate for each a bit mask how many numbers it would affect (making them not beautiful) if we choose it. The answer would be the best mask - where number of not affected numbers is maximum. Also, if 2K > N, then there exists a bit mask which would not affect any number. Thus, in this case it always possible to find a bit mask where each number from 1 to N is on the visible side.
+							Let’s call a X is beautiful if it’s visible in one of the K cards. You can notice that some X will not be beautiful number in only one case - when every card from 1 to K is flipped to the side where X is not visible, which can be represented by a bit mask of length K. Now we can calculate for each a bit mask how many numbers it would affect (making them not beautiful) if we choose it. The answer would be the best mask - where number of not affected numbers is maximum. Also, if 2^K > N, then there exists a bit mask which would not affect any number. Thus, in this case it always possible to find a bit mask where each number from 1 to N is on the visible side.
 
 							<br /><br />
               You can find more detailed solution in the <a href="../../data/E-editorial.pdf">editorial</a>.
