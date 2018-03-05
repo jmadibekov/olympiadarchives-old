@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+
+	<title>Nurbakyt's Blog #6</title>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'/>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold|Reenie+Beanie">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="main.css"/>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/> -->
+
+  <!-- for C++ design -->
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+</head>
+
+<body>
+
+	 <div class = "w3-content w3-margin-top" style = "max-width:1000px">
+		 <div class="w3-row w3-card w3-white">
+		    <h1 class="page-title">Blog #6</h1>
+		 </div>
+		<br>
+		<br>
+		<section id="content">
+
+      <!-- <article class="fontColor"> -->
+      <article class="w3-container w3-card-2 w3-white col-main">
+
+        <header class="w3-container col-main">
+          <h1>Editorial of "Tima and sum of powers"</h1>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span> <time datetime="2018-03-06T13:00:00+06:00">Tue 6 March 2018</time>
+ 			       </span>
+            </div>
+          </div>
+        </header>
+        <br>
+        <div class="col-main w3-container">
+          <main id="article-content">
+            <p>
+              I got 100 points on this problem during a competition. Now, reminiscing about my time at that Olympiad, I decided to write an editorial for this problem.
+
+              <br />
+              You can download full tests and author solutions <a href="../../archives/index.html">here</a>. You can submit your solution <a href="http://codeforces.com/group/Uo1lq8ZyWf/contest/212519/problem/H">here</a>
+              <br /><br />
+            </p>
+            <h3><a href="../../data/H.pdf">Statement</a><br /><br /></h4>
+            <h3><a href="../../data/H(sumk)-editorial.pdf">Editorial</a><br /><br /></h4>
+            <h3>Code</h3>
+
+            <pre class="prettyprint">
+              const int MAX_N = (int)1e5 + 123;
+              const int mod = (int)1e9 + 7;
+
+              int n, m, k;
+              int a[MAX_N];
+
+              int pw[30][MAX_N], sum[30][MAX_N];
+              int c[30][30];
+
+              void add(int &a, const int &b) {
+                  a += b;
+                  if (a >= mod)
+                      a -= mod;
+              }
+
+              int get(int it, int l, int r) {
+                  int res = sum[it][r];
+                  add(res, mod - sum[it][l - 1]);
+                  return res;
+              }
+
+              int main() {
+                  scanf("%d%d%d", &n, &m, &k);
+                  for (int i = 1; i <= n; i++) {
+                      scanf("%d", &a[i]);
+                  }
+                  for (int i = 0; i <= k; i++) {
+                      c[i][0] = c[i][i] = 1;
+                      for (int j = 1; j < i; j++) {
+                          c[i][j] = c[i - 1][j];
+                          add(c[i][j], c[i - 1][j - 1]);
+                      }
+                  }
+                  pw[0][0] = 1;
+                  for (int it = 0; it <= k; it++) {
+                      for (int i = 1; i <= n; i++) {
+                          if (it == 0)
+                              pw[it][i] = 1;
+                          else
+                              pw[it][i] = pw[it - 1][i] * 1ll * i % mod;
+                          sum[it][i] = sum[it][i - 1];
+                          add(sum[it][i], pw[it][i] * 1ll * a[i] % mod);
+                      }
+                  }
+                  for (int i = 1; i + m - 1 <= n; i++) {
+                      int cons = i - 1;
+                      int res = 0;
+                      for (int j = 0; j <= k; j++) {
+                          int now = c[k][j] * 1ll * pw[j][cons] % mod;
+                          now = 1ll * now * get(k - j, i, i + m - 1) % mod;
+                          if (j % 2 == 1)
+                              now = mod - now;
+                          add(res, now);
+                      }
+                      printf("%d\n", res);
+                  }
+                  return 0;
+              }
+             </pre>
+
+          </main>
+          <br>
+        </div>
+      </article>
+      <br>
+      <br>
+      <br>
+
+		 </div>
+
+		 <footer class="container">
+	       <div class = "row">
+	         <nav>
+	           <ul>
+	               <li><a href="../../index.html">Home page</a></li>
+	               <li><a href="../../competitive-programming/index.html">Competitive Programming</a></li>
+	               <li><a href="../../archives/index.html">Archives</a></li>
+	             </ul>
+
+	             <div class="about-me">
+	               <a href="../../about-me/index.html">About me</a>
+	             </div>
+	         </nav>
+	       </div>
+
+	       <div class = "copyright">
+	         <div class = "row">
+	             <p>&copy; Nurbakyt Madibek 2017</p>
+	             <p>mnurbakyt@icloud.com</p>
+	         </div>
+	       </div>
+
+	   </footer>
+
+</body>
+
+</html>
