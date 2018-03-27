@@ -1,3 +1,7 @@
+.smallHeader {
+  margin-bottom: 30px;
+}
+
 li.dropdown ul {
   display : none;
 }
